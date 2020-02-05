@@ -1,16 +1,86 @@
-body {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,24,1) 98%, rgba(121,9,24,1) 98%);}
-
-.title {
-  color: white;
-  text-align: center;
-  font-size: 7rem;
-  margin-top: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.test {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container-slide {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+}
+
+.container-slide .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-slide .slide.slide1 {
+  background: url(https://images.hdqwalls.com/wallpapers/aquaman-4k-new-73.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.container-slide .slide.slide2 {
+  background: url(https://www.pixel4k.com/wp-content/uploads/2019/09/new-thor-avengers-endgame_1568055492.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  left: 51.75%;
+}
+
+#right-side:hover .container-slide .slide.slide2 {
+  animation-fill-mode: forwards;
+  animation: slide 1s;
+}
+
+#nav {
+  background: black;
+  height: 10vh;
+}
+
+#nav a {
   color: white;
-  font-size: 8em;
+}
+
+#right-side {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+#left-side {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes slide {
+  0% {
+    left: 51.75%;
+  }
+  100% {
+    left: 0;
+  }
 }
