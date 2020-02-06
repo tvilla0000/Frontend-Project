@@ -1,29 +1,45 @@
 import React, {Component} from 'react';
 import API from "../../API/supeApi";
-// import './MarvelHeroes.css';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+    } from 'reactstrap';
+import './MarvelHeroes.css';
 
 
 class MarvelHeroes extends Component {
     state = {
-        supes: []
+        supes:[]
         };
     
         async componentDidMount() {
         let supes = await API.get(`/all.json `);
         this.setState({
-            supes: supes
+            supes: supes.data
         });
-        console.log(this.state.supes.data[4].name);
+        console.log(this.state.supes);
         }
         render() {
 
             return (
                 <div>
-            <h1>
-            {/* {this.state.supes.data[0]} */}
-            </h1>
-        </div>
-    )
+                    {this.state.supes.map(supe => (
+                    <div key={supe.id}>
+                    <Card class='card'>
+                    <div class='image'>
+                        <CardImg src={supe.images.lg} alt="Card image cap" />
+                    </div>
+                        <CardBody>
+                        <CardTitle>{supe.name}</CardTitle>
+                        <CardSubtitle>{supe.biography.fullName}</CardSubtitle>
+                        <CardText>{supe.work.occupation}</CardText>
+                        <Button>More Info</Button>
+                        </CardBody>
+                    </Card>
+                    </div>
+            ))}
+                </div>
+        )
     }
 }
 
