@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Routes from "./config/routes";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Slide from "./Components/ImgSlide";
@@ -15,14 +15,11 @@ class App extends Component {
     this.setState({
       supes: supes
     });
+    // console.log(this.state.supes.data);
   }
 
   render() {
-    return (
-      <div>
-        <Slide />
-      </div>
-    );
+    return <div></div>;
   }
 }
 
