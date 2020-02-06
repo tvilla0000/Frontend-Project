@@ -33,23 +33,27 @@ code {
 }
 
 .container-slide .slide.slide1 {
-  background: url(https://images.hdqwalls.com/wallpapers/aquaman-4k-new-73.jpg);
+  background: url(https://wallpaperaccess.com/full/382536.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
 .container-slide .slide.slide2 {
-  background: url(https://www.pixel4k.com/wp-content/uploads/2019/09/new-thor-avengers-endgame_1568055492.jpg);
+  background: url(https://wallpaperaccess.com/full/699897.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  left: 51.75%;
+  left: 50.75%;
+  transition: 1s;
 }
 
-#right-side:hover .container-slide .slide.slide2 {
-  animation-fill-mode: forwards;
-  animation: slide 1s;
+.container-slide .slide.slide2:hover {
+  left: 20%;
+  transition: 1s;
+}
+.container-slide .slide.slide1:hover + .slide.slide2 {
+  left: 85%;
 }
 
 #nav {
@@ -66,7 +70,6 @@ code {
   width: 50%;
   position: absolute;
   right: 0;
-  z-index: 1;
 }
 
 #left-side {
@@ -74,13 +77,4 @@ code {
   width: 50%;
   position: absolute;
   left: 0;
-}
-
-@keyframes slide {
-  0% {
-    left: 51.75%;
-  }
-  100% {
-    left: 0;
-  }
 }

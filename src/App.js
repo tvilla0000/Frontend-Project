@@ -15,7 +15,6 @@ class App extends Component {
     this.setState({
       supes: supes
     });
-    console.log(this.state.supes);
   }
 
   render() {
