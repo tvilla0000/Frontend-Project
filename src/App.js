@@ -3,7 +3,7 @@ import "./App.css";
 import Slide from "./Components/ImgSlide";
 import API from "./API/supeApi";
 import { Route, Switch } from "react-router-dom";
-import MHeroes from "./Components/Marvel/MarvelHeroes";
+import MHeroesPage from "./Components/Marvel/MHeroPage";
 
 class App extends Component {
   state = {
@@ -27,7 +27,7 @@ class App extends Component {
           <Route
             exact
             path="/marvelheroes"
-            render={() => <MHeroes supes={this.state.supes} />}
+            render={() => <MHeroesPage supes={this.state.supes} />}
           />
         </Switch>
       </div>
