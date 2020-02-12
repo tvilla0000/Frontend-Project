@@ -1,8 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import MHeroes from "./MarvelHeroes";
+import Nav from "../NavBar";
 
 const MHeroPage = props => {
-  return <div>{console.log(props)}</div>;
+  return (
+    <div>
+      <Nav />
+      <MHeroes supes={props.supes} />
+    </div>
+  );
 };
 
 export default MHeroPage;
