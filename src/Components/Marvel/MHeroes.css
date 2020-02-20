@@ -10,6 +10,11 @@ body {
   transform: translateY(-40px);
   transition: 1s;
   font-size: 15px;
+  overflow: hidden;
+}
+
+#Beast > p {
+  font-size: 12px;
 }
 
 .M-supe-card:hover #drop-in {
@@ -21,7 +26,7 @@ body {
 
 .M-supe-card {
   width: 22vw;
-  height: 450px;
+  height: 500px;
   background: #0a0a0a;
   transition: 0.5s;
   margin: 6vh 0;
