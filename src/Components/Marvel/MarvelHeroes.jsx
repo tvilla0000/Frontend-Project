@@ -16,12 +16,20 @@ const MarvelHeroes = props => {
 
   const MHeroes = filterMarvel.map(supe => {
     return (
-      <div key={supe.id} className="M-supe-card">
+      <div key={supe.id} className="M-supe-card" id={supe.name}>
         <img src={supe.images.lg} alt={supe.name} className="M-supe-img" />
         <h1>{supe.name}</h1>
         <div className="line"></div>
-        <p id="drop-in">Full Name: {supe.biography.fullName}</p>
-        <p id="drop-in">First Appearance: {supe.biography.firstAppearance}</p>
+        <p id="drop-in">
+          Full Name:{" "}
+          <span style={{ color: "red" }}>"{supe.biography.fullName}"</span>
+        </p>
+        <p id="drop-in">
+          First Appearance:{" "}
+          <span style={{ color: "limeGreen" }}>
+            "{supe.biography.firstAppearance}"
+          </span>
+        </p>
         <ul className="prgbar-list">
           <li className="prgbar">
             <div
