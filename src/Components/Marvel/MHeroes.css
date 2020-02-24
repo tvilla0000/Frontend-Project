@@ -10,7 +10,7 @@ body {
   transform: translateY(-40px);
   transition: 1s;
   font-size: 15px;
-  overflow: hidden;
+  text-decoration: none;
 }
 
 #Beast > p {
