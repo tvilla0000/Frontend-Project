@@ -78,7 +78,6 @@ body {
 .M-supe-img {
   width: 100%;
   height: 50%;
-  border-radius: 5px;
   opacity: 0.3;
   transition: 1s;
 }
@@ -120,13 +119,12 @@ body {
   transform: translateY(0);
 }
 
-
 @keyframes skew {
   0% {
     transform: skew(0deg);
   }
   100% {
-    transform: skew(1.25deg, 1.25deg);
+    transform: skew(0.75deg, 0.75deg);
   }
 }
 
