@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import './Pages/imgSlide.css';
-import dc  from '../assets/images/dc.jpg';
-import  marvel  from '../assets/images/marvel.jpg'
+import { Link } from "react-router-dom";
+import "./imgSlide.css";
+import dc from "../assets/images/dc.jpg";
+import marvel from "../assets/images/marvel.jpg";
 
 class ImgSlide extends Component {
   constructor(props) {
@@ -14,17 +14,15 @@ class ImgSlide extends Component {
     return (
       <div>
         <div className="container-slide">
-          <div id="left-side"></div>
-          <div id="right-side"></div>
           <div className="slide slide1">
-          <Link to={'/dcheroes'}>
-          <img className="dcImage" src={ dc } />
-          </Link>
+            <Link to={"/dcheroes"}>
+              <img className="dcImage" src={dc} />
+            </Link>
           </div>
           <div className="slide slide2">
-          <Link to={'/marvelheroes'}>
-          <img className="marvelImage" src={ marvel } />
-          </Link>
+            <Link to={"/marvelheroes"}>
+              <img className="marvelImage" src={marvel} />
+            </Link>
           </div>
         </div>
       </div>
