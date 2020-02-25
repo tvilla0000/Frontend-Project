@@ -1,0 +1,55 @@
+.slide2 img {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  top: 50%;
+  visibility: hidden;
+  transform: translateX(300%);
+  opacity: -1;
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  transition: 1s;
+}
+
+.slide2:hover img {
+  visibility: visible;
+  transform: translateX(208%);
+  opacity: 1;
+  transition: 1s;
+}
+
+.M {
+  color: crimson;
+  font-size: 2.2em;
+}
+
+.slide1 img {
+  width: 24vw;
+  height: 28vh;
+  position: absolute;
+  visibility: hidden;
+  transform: translateX(-100%);
+  opacity: -1;
+  top: 50%;
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.slide1:hover img {
+  visibility: visible;
+  transform: translateX(10%);
+  opacity: 1;
+  transition: 1s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 3%;
+  }
+}
