@@ -4,6 +4,7 @@ import Slide from "./Components/ImgSlide";
 import API from "./API/supeApi";
 import { Route, Switch } from "react-router-dom";
 import MHeroesPage from "./Components/Marvel/MHeroPage";
+import DCHeroesPage from "./Components/DC/DCHeroesPage";
 import DetailPage from "./Components/Pages/DetailPage";
 
 class App extends Component {
@@ -16,7 +17,6 @@ class App extends Component {
     this.setState({
       supes: supes.data
     });
-    console.log(this.state.supes);
   }
 
   render() {
@@ -33,6 +33,20 @@ class App extends Component {
           <Route
             exact
             path="/marvelheroes/:id"
+            render={({ match }) => (
+              <DetailPage id={match.params.id} supes={this.state.supes} />
+            )}
+          />
+
+          <Route
+            exact
+            path="/dcheroes"
+            render={() => <DCHeroesPage supes={this.state.supes} />}
+          />
+
+          <Route
+            exact
+            path="/dcheroes/:id"
             render={({ match }) => (
               <DetailPage id={match.params.id} supes={this.state.supes} />
             )}
